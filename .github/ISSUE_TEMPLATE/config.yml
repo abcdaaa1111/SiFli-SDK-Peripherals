@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: SiFli SDK Documentation
+    url: https://docs.sifli.com/
+    about: Access the official SiFli SDK documentation
+  - name: sf-pkg Package Manager
+    url: https://docs.sifli.com/projects/sdk/latest/sf32lb52x/sf_pkg/index.html
+    about: Learn how to publish drivers to sf-pkg
+  - name: SiFli Community
+    url: https://github.com/OpenSiFli
+    about: Join the SiFli community

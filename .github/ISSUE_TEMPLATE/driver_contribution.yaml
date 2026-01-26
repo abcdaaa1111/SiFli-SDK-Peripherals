@@ -1,0 +1,187 @@
+name: Driver Contribution
+description: Submit a new driver or contribute to existing drivers
+title: '[DRIVER] '
+labels: ['driver-contribution']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for contributing a driver! Please provide detailed information about your contribution.
+
+  - type: input
+    id: device-name
+    attributes:
+      label: Device Name
+      description: Name of the peripheral device
+      placeholder: "E.g., OV5640 Camera Sensor"
+    validations:
+      required: true
+
+  - type: input
+    id: manufacturer
+    attributes:
+      label: Manufacturer
+      description: Device manufacturer
+      placeholder: "E.g., OmniVision"
+    validations:
+      required: true
+
+  - type: input
+    id: part-number
+    attributes:
+      label: Part Number
+      description: Device part number
+      placeholder: "E.g., OV5640"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: Peripheral category
+      options:
+        - camera
+        - sensor
+        - flash
+        - other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Contribution Type
+      description: What type of contribution is this?
+      options:
+        - New driver
+        - Enhancement to existing driver
+        - Bug fix in existing driver
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "## Implementation Details"
+
+  - type: checkboxes
+    id: structure
+    attributes:
+      label: Directory Structure
+      description: Confirm your driver follows the standard structure
+      options:
+        - label: Follows standard structure `<category>/<device-name>/driver/`
+          required: true
+
+  - type: checkboxes
+    id: features
+    attributes:
+      label: Features Implemented
+      options:
+        - label: Basic initialization
+        - label: Core functionality
+        - label: Error handling
+        - label: Configuration options
+        - label: Power management (if applicable)
+
+  - type: checkboxes
+    id: documentation
+    attributes:
+      label: Documentation
+      options:
+        - label: README with usage instructions
+        - label: API documentation/comments
+        - label: Example code provided
+        - label: Hardware compatibility notes
+
+  - type: checkboxes
+    id: testing
+    attributes:
+      label: Testing
+      options:
+        - label: Compiled successfully
+        - label: Tested on target hardware
+        - label: All features verified
+        - label: Error cases handled
+
+  - type: markdown
+    attributes:
+      value: "## Hardware Information"
+
+  - type: input
+    id: target-platform
+    attributes:
+      label: Target Platform(s)
+      description: E.g., SF32LB52X
+      placeholder: "SF32LB52X"
+    validations:
+      required: true
+
+  - type: input
+    id: sdk-version
+    attributes:
+      label: SiFli SDK Version
+      description: Compatible SDK version
+      placeholder: "v1.0.0"
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: External Dependencies
+      description: List any external dependencies (if any)
+      placeholder: "None or list specific libraries..."
+
+  - type: textarea
+    id: special-hardware
+    attributes:
+      label: Special Hardware/Tools
+      description: Any special hardware or tools needed for testing
+      placeholder: "E.g., JTAG debugger, development board..."
+
+  - type: markdown
+    attributes:
+      value: "## Documentation Links"
+
+  - type: input
+    id: datasheet-link
+    attributes:
+      label: Datasheet Link
+      description: Link to device datasheet (if public)
+      placeholder: "https://example.com/datasheet.pdf"
+
+  - type: textarea
+    id: reference
+    attributes:
+      label: Reference Implementation
+      description: Reference to any existing implementations or specifications
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Configuration Notes
+      description: Any special configuration notes for the driver
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Final Checklist
+      options:
+        - label: Code follows project conventions
+          required: true
+        - label: CMake build system is properly configured
+          required: true
+        - label: No compilation warnings
+          required: true
+        - label: Examples are included and tested
+          required: true
+        - label: Ready for sf-pkg publishing
+          required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Notes
+      description: Add any other relevant information about the driver contribution
+

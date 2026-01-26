@@ -1,0 +1,88 @@
+name: Feature Request
+description: Suggest an idea for this project
+title: '[FEATURE] '
+labels: ['enhancement']
+body:
+  - type: markdown
+    attributes:
+      value: "Thank you for suggesting a feature. Please describe your idea in detail."
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of what you want to happen
+      placeholder: "I want to add support for..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use Case
+      description: Explain the use case and why this feature would be useful
+      placeholder: "This would be useful because..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: Describe how you think this feature should work
+      placeholder: "The implementation could..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Peripheral Category
+      description: Which category does this feature relate to?
+      options:
+        - Camera
+        - Sensor
+        - Flash
+        - Other
+
+  - type: input
+    id: manufacturer
+    attributes:
+      label: Device Manufacturer
+      description: If you have a specific device in mind
+      placeholder: "E.g., OmniVision, Sony"
+
+  - type: input
+    id: model
+    attributes:
+      label: Device Model
+      description: Device model number
+      placeholder: "E.g., OV5640"
+
+  - type: input
+    id: part-number
+    attributes:
+      label: Part Number
+      description: Device part number (if available)
+      placeholder: "E.g., OV5640-Z02"
+
+  - type: textarea
+    id: datasheet
+    attributes:
+      label: Datasheet/Reference
+      description: Link to datasheet or reference documentation
+      placeholder: "https://example.com/datasheet.pdf"
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Any alternative solutions or features you've considered
+      placeholder: "Other approaches could be..."
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Add any other context or screenshots about the feature request
+

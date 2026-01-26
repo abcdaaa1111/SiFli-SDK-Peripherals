@@ -1,0 +1,140 @@
+name: Bug Report
+description: Report a bug to help us improve
+title: '[BUG] '
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a bug. Please provide as much detail as possible to help us understand and fix the issue.
+  
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of what the bug is.
+      placeholder: |
+        Example: The camera driver fails to initialize when...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Peripheral Category
+      description: Which category does this bug relate to?
+      options:
+        - camera
+        - sensor
+        - flash
+        - other
+    validations:
+      required: true
+
+  - type: textarea
+    id: device-info
+    attributes:
+      label: Device Information
+      description: Device/sensor name and any relevant identifiers
+      placeholder: |
+        Device Name: OV5640
+        Part Number: OV5640
+        Manufacturer: OmniVision
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Steps to reproduce the behavior
+      placeholder: |
+        1. Initialize the driver with...
+        2. Call the function...
+        3. Expected behavior but got...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What you expected to happen
+      placeholder: "The driver should initialize successfully and return..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened
+      placeholder: "The driver returned an error: ..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Screenshots/Logs
+      description: If applicable, add screenshots or log output to help explain
+      render: text
+
+  - type: input
+    id: sdk-version
+    attributes:
+      label: SiFli SDK Version
+      description: E.g., v1.0.0
+      placeholder: "v1.0.0"
+    validations:
+      required: true
+
+  - type: input
+    id: target-platform
+    attributes:
+      label: Target Platform
+      description: E.g., SF32LB52X
+      placeholder: "SF32LB52X"
+    validations:
+      required: true
+
+  - type: input
+    id: cmake-version
+    attributes:
+      label: CMake Version
+      placeholder: "3.16.0"
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System
+      options:
+        - Linux
+        - Windows
+        - macOS
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: compiler
+    attributes:
+      label: Compiler
+      description: E.g., GCC, Clang, MSVC
+      placeholder: "GCC 9.3.0"
+    validations:
+      required: true
+
+  - type: textarea
+    id: code-sample
+    attributes:
+      label: Code Sample
+      description: Minimal code to reproduce the issue (if applicable)
+      render: c
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any other context about the problem
+
